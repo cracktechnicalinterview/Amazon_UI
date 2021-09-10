@@ -1,0 +1,17 @@
+.LeftSize__main {
+    height: 100vh;
+    width: 200px;
+    border-right: 2px solid #DDDDDD;
+    padding: 40px;
+}
+.leftSide__header {
+    font-weight: bold;
+    margin: 10px;
+}
+.leftSide__brandname {
+
+}
+.brandname {
+    display: block;
+    width: 100px;
+}
