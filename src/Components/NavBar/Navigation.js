@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../CartContext';
 import "./NavBar.css"
 
 class NavBar extends Component {
+
+    static contextType = CartContext;
+
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
+        let {item,size,increment} = this.context;
+
         return ( 
             <div>
                 <div className="navbar__component">
-                <div className="navbar__logo"></div>
+                <Link to="">
+                    <div className="navbar__logo"></div>
+                </Link>
                 <div className="navbar__locator">
                     <div className="navbar__locatorImage"></div>
                     <div className="navbar__location"> Bangalore</div>
@@ -41,11 +50,13 @@ class NavBar extends Component {
                     <div style={{ fontSize: "14px" }}>Returns</div>
                     <div style={{ fontWeight: "bold" }}> & Order</div>
                 </div>
+                <Link to="/checkout">
                 <div className="navbar_text navbar__cart">
                     <div src="" className="cart__image" ></div>
-                    <div className="cart__item">0</div>
+                    <div className="cart__item"> {size} </div>
                     <div className="navbar_text_cart">Cart</div>
                 </div>
+                </Link>
                 
             </div>
                 <div className="navbar__footer">

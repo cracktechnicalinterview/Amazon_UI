@@ -5,14 +5,14 @@ function AdvertisementFour(props) {
     return (
         <div className="AdvertisementOne__main">
             <div className="AdvertisementOne__header">
-            Up to 70% off | Electronics clearance store
+                {props.definition.header}
             </div>
             <div className="AdvertisementOne__body">
-                <img src="https://ik.imagekit.io/amazon1234/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204__nBkAcb2wW.jpg?updatedAt=1627731880089" className="ad_fourImage" />
-                <img src="https://ik.imagekit.io/amazon1234/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204__nBkAcb2wW.jpg?updatedAt=1627731880089" className="ad_fourImage" />       
-                <img src="https://ik.imagekit.io/amazon1234/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204__nBkAcb2wW.jpg?updatedAt=1627731880089" className="ad_fourImage" />
-                <img src="https://ik.imagekit.io/amazon1234/V238940049_IN_PC_BAU_Edit_Creation_Laptops2X._SY608_CB667377204__nBkAcb2wW.jpg?updatedAt=1627731880089" className="ad_fourImage" />   
-            </div>
+                <img src={props.definition.definition[0]} className="ad_fourImage" />
+                <img src={props.definition.definition[1]} className="ad_fourImage" />
+                <img src={props.definition.definition[2]} className="ad_fourImage" />
+                <img src={props.definition.definition[3]} className="ad_fourImage" />
+             </div>
             <div className="AdvertisementOne__footer">
                 See more
             </div>
